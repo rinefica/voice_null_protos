@@ -8,7 +8,7 @@ vars:
 tasks:
   generate: ## Команда для генерации из proto файлов
     cmds:
-      - protoc -I proto proto/sso/*.proto --go_out=./gen/go/ --go_opt=paths=source_relative --go-grpc_out=./gen/go/
+      - protoc -I proto proto/sso/*.proto --go_out=./gen/go/ --go_opt=paths=source_relative --go-grpc_out=./gen/go/ --go-grpc_opt=paths=source_relative
     aliases:
       - gen
     desc: "Generate code from proto files"
